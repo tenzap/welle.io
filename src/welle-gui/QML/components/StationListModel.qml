@@ -17,9 +17,9 @@ ListModel {
         serialize()
     }
 
-    function removeStation(sId, channel) {
+    function removeStation(sId) {
         for(var i=0; i<count; i++)
-            if(get(i).stationSId === sId && get(i).channelName === channel) {
+            if(get(i).stationSId === sId) {
                 remove(i)
                 serialize()
                 return
@@ -31,9 +31,9 @@ ListModel {
         serialize()
     }
 
-    function setFavorit(sId, channel, favorit) {
+    function setFavorit(sId, favorit) {
         for(var i=0; i<count; i++)
-            if(get(i).stationSId === sId && get(i).channelName === channel) {
+            if(get(i).stationSId === sId) {
                 get(i).favorit = favorit
                 serialize()
                 return
