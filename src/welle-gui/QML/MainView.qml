@@ -318,12 +318,12 @@ ApplicationWindow {
                     onClicked: radioController.play(channelName, stationName, stationSId)
                     onFavoritClicked: {
                         var favoritInvert = !favorit
-                        stationList.setFavorit(stationSId, channelName, favoritInvert) // Invert favorit
+                        stationList.setFavorit(stationSId, favoritInvert) // Invert favorit
 
                         if(favoritInvert)
                             favoritsList.addStation(stationName, stationSId, channelName, true)
                         else
-                            favoritsList.removeStation(stationSId, channelName);
+                            favoritsList.removeStation(stationSId);
                     }
                 }
 
